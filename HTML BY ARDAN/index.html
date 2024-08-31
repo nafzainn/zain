@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ahnaf</title>
+    <style>
+        /* Light Theme (Default) */
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        h1 {
+            color: rgb(20, 174, 212);
+            text-transform: capitalize;
+            text-align: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        img {
+            width: 225px;
+            height: 200px;
+            margin: auto;
+            display: block;
+            border-radius: 50%;
+        }
+
+        p {
+            text-align: center;
+            text-transform: capitalize;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Dark Theme */
+        body.dark-theme {
+            background-color: black;
+            color: white;
+        }
+
+        body.dark-theme footer {
+            color: #A0AEC0;
+        }
+
+        /* Switch Container */
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+
+        /* Hide the checkbox */
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        /* The slider */
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          transition: background-color 0.4s ease;
+          border-radius: 34px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 5px;
+          box-sizing: border-box;
+        }
+
+        /* Hide the icons by default */
+        .slider .icons {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .slider .sun {
+          color: yellow;
+          opacity: 1;
+          transition: opacity 0.4s ease, transform 0.4s ease;
+          transform: translateX(0);
+        }
+
+        .slider .moon {
+          color: #f0e68c;
+          opacity: 0;
+          transition: opacity 0.4s ease, transform 0.4s ease;
+          transform: translateX(-20px);
+        }
+
+        /* Toggle switch appearance when checked */
+        input:checked + .slider {
+          background-color: #2196F3;
+        }
+
+        /* Animate the icons and slider when toggled */
+        input:checked + .slider .sun {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+
+        input:checked + .slider .moon {
+          opacity: 1;
+          transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox" id="theme-switcher">
+        <span class="slider">
+            <span class="icons">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </span>
+        </span>
+    </label>
+    <h1><span style="color: #333;">| </span>about</h1>
+    <img src="ahnaf.jpg" alt="">
+    <p>name : ahnaf zaidan biantoro</p>
+    <p>age : 19</p>
+    <p>date of birth : january 20, 2005</p>
+    <footer>&copy; 2024 Zain Website</footer>
+
+    <script>
+        document.getElementById('theme-switcher').addEventListener('change', function() {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+</html>
